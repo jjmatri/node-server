@@ -1,0 +1,14 @@
+{
+  "name": "jaime",
+  "version": "1.0.0",
+  "description": "aplicacion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jai",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
