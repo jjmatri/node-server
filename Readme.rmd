@@ -1,0 +1,10 @@
+¿Qué sucedio al usar async y await?
+al implementar esta promesa no sucedio nada ya que como utilizo un do while no queda esperando el resultado 
+de la promesa me muestra al terminar el programa
+¿Qué sucedio al usar el método then()?
+al implementar esta promesa no sucedio nada ya que como utilizo un do while no queda esperando el resultado 
+de la promesa me muestra al terminar el programa
+
+¿Qué diferencias encontraste entre async, await y el método then()?
+
+el async ,await es codigo mas limpio y mejor control de las respuestas y eficiente que then()

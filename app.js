@@ -1,18 +1,18 @@
 var readlineSync = require('readline-sync');
 
 
-const tareas =[{
-		"id": 1,
-		"descripcion": "dormir",
-		"estado": false
+const tareas = [{
+	"id": 1,
+	"descripcion": "dormir",
+	"estado": false
 
-	},
-	{
-		"id": 2,
-		"descripcion": "salir",
-		"estado": true
+},
+{
+	"id": 2,
+	"descripcion": "salir",
+	"estado": true
 
-	}]
+}]
 
 
 
@@ -22,8 +22,9 @@ do {
 	switch (op) {
 
 		case '1':
+			
 			//imprimir el arreglo
-			function imprimir() {
+			function imprimir2() {
 
 				for (let i = 0; i < tareas.length; i++) {
 					console.log(tareas[i]);
@@ -31,20 +32,20 @@ do {
 				}
 
 			}
-			console.log(imprimir());
+			console.log(imprimir2());
 
-			//console.log('El usuario es de ot');
+			
 
 			break;
-
+         
 
 		case '2':
+
+
 			var id = readlineSync.question('Digite id \n');
 
 			var des = readlineSync.question('Digite descripcion \n');
 			var estado = readlineSync.question('Digite estado  \n');
-            
-			
 
 
 			//agregamos otro objeto
@@ -55,11 +56,8 @@ do {
 
 			}
 			tareas.push(tarea);
-			
-            
-			//tareas.push(id, des, estado);
 
-			//console.log('El usuario es de otro pais');
+
 			//imprimir el arreglo
 			function imprimir() {
 
@@ -70,7 +68,7 @@ do {
 
 			}
 			console.log(imprimir());
-              
+
 			break;
 
 		case '3':
@@ -107,6 +105,7 @@ do {
 
 			break;
 		case '4':
+
 			function imprimir() {
 
 				for (let i = 0; i < tareas.length; i++) {
@@ -121,14 +120,23 @@ do {
 			var id = readlineSync.question('Digite el  id editar \n');
 
 			var est = readlineSync.question('Digite estado \n');
-             
+
 			actualizar(id, est);
-			
+
 			//funcio actualizar
 			function actualizar(a, b) {
- 
-				tareas[a].estado = b;
-				console.log("Actualizamos ");
+				for (let i = 0; i < tareas.length; i++) {
+					//console.log(tareas[i]);
+
+					if (tareas[i].id == a) {
+						tareas[i].estado = b;
+						console.log("Actualizamos " + tareas[i].id);
+
+
+					}
+
+				}
+
 
 			}
 
